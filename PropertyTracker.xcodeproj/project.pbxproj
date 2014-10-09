@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		7F463FF319E73EE50072A677 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F463FF219E73EE50072A677 /* main.m */; };
 		7F463FF619E73EE50072A677 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F463FF519E73EE50072A677 /* AppDelegate.m */; };
-		7F463FF919E73EE50072A677 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F463FF819E73EE50072A677 /* FirstViewController.m */; };
-		7F463FFC19E73EE50072A677 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F463FFB19E73EE50072A677 /* SecondViewController.m */; };
+		7F463FF919E73EE50072A677 /* PropertyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F463FF819E73EE50072A677 /* PropertyViewController.m */; };
+		7F463FFC19E73EE50072A677 /* TenantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F463FFB19E73EE50072A677 /* TenantViewController.m */; };
 		7F463FFF19E73EE50072A677 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F463FFD19E73EE50072A677 /* Main.storyboard */; };
 		7F46400119E73EE50072A677 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F46400019E73EE50072A677 /* Images.xcassets */; };
 		7F46400419E73EE50072A677 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F46400219E73EE50072A677 /* LaunchScreen.xib */; };
@@ -34,10 +34,10 @@
 		7F463FF219E73EE50072A677 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7F463FF419E73EE50072A677 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7F463FF519E73EE50072A677 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7F463FF719E73EE50072A677 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		7F463FF819E73EE50072A677 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		7F463FFA19E73EE50072A677 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		7F463FFB19E73EE50072A677 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		7F463FF719E73EE50072A677 /* PropertyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PropertyViewController.h; sourceTree = "<group>"; };
+		7F463FF819E73EE50072A677 /* PropertyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropertyViewController.m; sourceTree = "<group>"; };
+		7F463FFA19E73EE50072A677 /* TenantViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TenantViewController.h; sourceTree = "<group>"; };
+		7F463FFB19E73EE50072A677 /* TenantViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TenantViewController.m; sourceTree = "<group>"; };
 		7F463FFE19E73EE50072A677 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7F46400019E73EE50072A677 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7F46400319E73EE50072A677 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -88,10 +88,10 @@
 			children = (
 				7F463FF419E73EE50072A677 /* AppDelegate.h */,
 				7F463FF519E73EE50072A677 /* AppDelegate.m */,
-				7F463FF719E73EE50072A677 /* FirstViewController.h */,
-				7F463FF819E73EE50072A677 /* FirstViewController.m */,
-				7F463FFA19E73EE50072A677 /* SecondViewController.h */,
-				7F463FFB19E73EE50072A677 /* SecondViewController.m */,
+				7F463FF719E73EE50072A677 /* PropertyViewController.h */,
+				7F463FF819E73EE50072A677 /* PropertyViewController.m */,
+				7F463FFA19E73EE50072A677 /* TenantViewController.h */,
+				7F463FFB19E73EE50072A677 /* TenantViewController.m */,
 				7F463FFD19E73EE50072A677 /* Main.storyboard */,
 				7F46400019E73EE50072A677 /* Images.xcassets */,
 				7F46400219E73EE50072A677 /* LaunchScreen.xib */,
@@ -227,10 +227,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F463FFC19E73EE50072A677 /* SecondViewController.m in Sources */,
+				7F463FFC19E73EE50072A677 /* TenantViewController.m in Sources */,
 				7F463FF619E73EE50072A677 /* AppDelegate.m in Sources */,
 				7F46401B19E741AA0072A677 /* PropertyTracker.xcdatamodeld in Sources */,
-				7F463FF919E73EE50072A677 /* FirstViewController.m in Sources */,
+				7F463FF919E73EE50072A677 /* PropertyViewController.m in Sources */,
 				7F463FF319E73EE50072A677 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

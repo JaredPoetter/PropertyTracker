@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 JP. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "TenantViewController.h"
 
-@interface SecondViewController ()
+@interface TenantViewController ()
 
 @end
 
-@implementation SecondViewController
+@implementation TenantViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

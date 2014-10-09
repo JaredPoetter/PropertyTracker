@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 JP. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "PropertyViewController.h"
 
-@interface FirstViewController ()
+@interface PropertyViewController ()
 
 @end
 
-@implementation FirstViewController
+@implementation PropertyViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

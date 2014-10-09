@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  FirstViewController.h
 //  PropertyTracker
 //
 //  Created by Jared Poetter on 10/9/14.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+@interface PropertyViewController : UIViewController
 
 
 @end
