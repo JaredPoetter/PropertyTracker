@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6244" systemVersion="13F34" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Event">
-        <attribute name="timeStamp" optional="YES" attributeType="Date">
-            <userInfo/>
-        </attribute>
-        <userInfo/>
-    </entity>
     <entity name="Payment" syncable="YES">
         <attribute name="amount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
@@ -52,11 +46,10 @@
         <relationship name="renter" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Person" inverseName="rentEvent" inverseEntity="Person" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Event" positionX="196" positionY="-45" width="128" height="58"/>
         <element name="Payment" positionX="-423" positionY="-45" width="128" height="133"/>
         <element name="Person" positionX="27" positionY="-16" width="128" height="178"/>
+        <element name="Picture" positionX="-81" positionY="215" width="128" height="73"/>
         <element name="Property" positionX="115" positionY="257" width="128" height="193"/>
         <element name="RentEvent" positionX="-414" positionY="269" width="128" height="163"/>
-        <element name="Picture" positionX="-81" positionY="215" width="128" height="73"/>
     </elements>
 </model>
