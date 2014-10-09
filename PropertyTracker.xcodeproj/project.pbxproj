@@ -15,6 +15,7 @@
 		7F46400119E73EE50072A677 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F46400019E73EE50072A677 /* Images.xcassets */; };
 		7F46400419E73EE50072A677 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F46400219E73EE50072A677 /* LaunchScreen.xib */; };
 		7F46401019E73EE50072A677 /* PropertyTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F46400F19E73EE50072A677 /* PropertyTrackerTests.m */; };
+		7F46401B19E741AA0072A677 /* PropertyTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F46401919E741AA0072A677 /* PropertyTracker.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		7F46400919E73EE50072A677 /* PropertyTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PropertyTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F46400E19E73EE50072A677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F46400F19E73EE50072A677 /* PropertyTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropertyTrackerTests.m; sourceTree = "<group>"; };
+		7F46401A19E741AA0072A677 /* PropertyTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PropertyTracker.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				7F463FFD19E73EE50072A677 /* Main.storyboard */,
 				7F46400019E73EE50072A677 /* Images.xcassets */,
 				7F46400219E73EE50072A677 /* LaunchScreen.xib */,
+				7F46401919E741AA0072A677 /* PropertyTracker.xcdatamodeld */,
 				7F463FF019E73EE50072A677 /* Supporting Files */,
 			);
 			path = PropertyTracker;
@@ -226,6 +229,7 @@
 			files = (
 				7F463FFC19E73EE50072A677 /* SecondViewController.m in Sources */,
 				7F463FF619E73EE50072A677 /* AppDelegate.m in Sources */,
+				7F46401B19E741AA0072A677 /* PropertyTracker.xcdatamodeld in Sources */,
 				7F463FF919E73EE50072A677 /* FirstViewController.m in Sources */,
 				7F463FF319E73EE50072A677 /* main.m in Sources */,
 			);
@@ -422,6 +426,7 @@
 				7F46401519E73EE50072A677 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7F46401619E73EE50072A677 /* Build configuration list for PBXNativeTarget "PropertyTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -430,8 +435,22 @@
 				7F46401819E73EE50072A677 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7F46401919E741AA0072A677 /* PropertyTracker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7F46401A19E741AA0072A677 /* PropertyTracker.xcdatamodel */,
+			);
+			currentVersion = 7F46401A19E741AA0072A677 /* PropertyTracker.xcdatamodel */;
+			path = PropertyTracker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7F463FE519E73EE50072A677 /* Project object */;
 }
