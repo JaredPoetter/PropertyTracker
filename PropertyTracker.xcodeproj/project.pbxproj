@@ -17,6 +17,12 @@
 		7F46401019E73EE50072A677 /* PropertyTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F46400F19E73EE50072A677 /* PropertyTrackerTests.m */; };
 		7F46401B19E741AA0072A677 /* PropertyTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F46401919E741AA0072A677 /* PropertyTracker.xcdatamodeld */; };
 		7F46401D19E7464C0072A677 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F46401C19E7464C0072A677 /* Main_iPhone.storyboard */; };
+		7FAA186B19E76728006DF56F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FAA186A19E76728006DF56F /* CoreData.framework */; };
+		7FAA186E19E7679B006DF56F /* Property.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAA186D19E7679B006DF56F /* Property.m */; };
+		7FAA187119E7679C006DF56F /* Payment.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAA187019E7679C006DF56F /* Payment.m */; };
+		7FAA187419E7679C006DF56F /* Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAA187319E7679C006DF56F /* Picture.m */; };
+		7FAA187719E7679C006DF56F /* RentEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAA187619E7679C006DF56F /* RentEvent.m */; };
+		7FAA187A19E7679D006DF56F /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAA187919E7679D006DF56F /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,17 @@
 		7F46400F19E73EE50072A677 /* PropertyTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropertyTrackerTests.m; sourceTree = "<group>"; };
 		7F46401A19E741AA0072A677 /* PropertyTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PropertyTracker.xcdatamodel; sourceTree = "<group>"; };
 		7F46401C19E7464C0072A677 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
+		7FAA186A19E76728006DF56F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7FAA186C19E7679B006DF56F /* Property.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Property.h; sourceTree = "<group>"; };
+		7FAA186D19E7679B006DF56F /* Property.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Property.m; sourceTree = "<group>"; };
+		7FAA186F19E7679C006DF56F /* Payment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Payment.h; sourceTree = "<group>"; };
+		7FAA187019E7679C006DF56F /* Payment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Payment.m; sourceTree = "<group>"; };
+		7FAA187219E7679C006DF56F /* Picture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture.h; sourceTree = "<group>"; };
+		7FAA187319E7679C006DF56F /* Picture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture.m; sourceTree = "<group>"; };
+		7FAA187519E7679C006DF56F /* RentEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RentEvent.h; sourceTree = "<group>"; };
+		7FAA187619E7679C006DF56F /* RentEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RentEvent.m; sourceTree = "<group>"; };
+		7FAA187819E7679C006DF56F /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		7FAA187919E7679D006DF56F /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FAA186B19E76728006DF56F /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +88,7 @@
 		7F463FE419E73EE50072A677 = {
 			isa = PBXGroup;
 			children = (
+				7FAA186A19E76728006DF56F /* CoreData.framework */,
 				7F463FEF19E73EE50072A677 /* PropertyTracker */,
 				7F46400C19E73EE50072A677 /* PropertyTrackerTests */,
 				7F463FEE19E73EE50072A677 /* Products */,
@@ -99,6 +118,7 @@
 				7F46400019E73EE50072A677 /* Images.xcassets */,
 				7F46400219E73EE50072A677 /* LaunchScreen.xib */,
 				7F46401919E741AA0072A677 /* PropertyTracker.xcdatamodeld */,
+				7FAA187B19E767A3006DF56F /* Database Classes */,
 				7F463FF019E73EE50072A677 /* Supporting Files */,
 			);
 			path = PropertyTracker;
@@ -128,6 +148,23 @@
 				7F46400E19E73EE50072A677 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7FAA187B19E767A3006DF56F /* Database Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7FAA187819E7679C006DF56F /* Person.h */,
+				7FAA187919E7679D006DF56F /* Person.m */,
+				7FAA187519E7679C006DF56F /* RentEvent.h */,
+				7FAA187619E7679C006DF56F /* RentEvent.m */,
+				7FAA187219E7679C006DF56F /* Picture.h */,
+				7FAA187319E7679C006DF56F /* Picture.m */,
+				7FAA186F19E7679C006DF56F /* Payment.h */,
+				7FAA187019E7679C006DF56F /* Payment.m */,
+				7FAA186C19E7679B006DF56F /* Property.h */,
+				7FAA186D19E7679B006DF56F /* Property.m */,
+			);
+			name = "Database Classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,8 +268,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FAA187419E7679C006DF56F /* Picture.m in Sources */,
 				7F463FFC19E73EE50072A677 /* TenantViewController.m in Sources */,
+				7FAA187A19E7679D006DF56F /* Person.m in Sources */,
 				7F463FF619E73EE50072A677 /* AppDelegate.m in Sources */,
+				7FAA187719E7679C006DF56F /* RentEvent.m in Sources */,
+				7FAA186E19E7679B006DF56F /* Property.m in Sources */,
+				7FAA187119E7679C006DF56F /* Payment.m in Sources */,
 				7F46401B19E741AA0072A677 /* PropertyTracker.xcdatamodeld in Sources */,
 				7F463FF919E73EE50072A677 /* PropertyViewController.m in Sources */,
 				7F463FF319E73EE50072A677 /* main.m in Sources */,

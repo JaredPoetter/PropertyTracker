@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6244" systemVersion="13F34" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Payment" syncable="YES">
+    <entity name="Payment" representedClassName="Payment" syncable="YES">
         <attribute name="amount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="month" optional="YES" attributeType="Date" syncable="YES"/>
@@ -8,7 +8,7 @@
         <relationship name="renter" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="payment" inverseEntity="Person" syncable="YES"/>
         <relationship name="rentEvent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RentEvent" inverseName="payment" inverseEntity="RentEvent" syncable="YES"/>
     </entity>
-    <entity name="Person" syncable="YES">
+    <entity name="Person" representedClassName="Person" syncable="YES">
         <attribute name="cellPhoneNumber" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="employer" optional="YES" attributeType="String" syncable="YES"/>
@@ -19,11 +19,11 @@
         <relationship name="payment" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Payment" inverseName="renter" inverseEntity="Payment" syncable="YES"/>
         <relationship name="rentEvent" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RentEvent" inverseName="renter" inverseEntity="RentEvent" syncable="YES"/>
     </entity>
-    <entity name="Picture" syncable="YES">
+    <entity name="Picture" representedClassName="Picture" syncable="YES">
         <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Property" syncable="YES">
+    <entity name="Property" representedClassName="Property" syncable="YES">
         <attribute name="baths" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="bedrooms" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
@@ -35,7 +35,7 @@
         <relationship name="picture" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Picture" syncable="YES"/>
         <relationship name="rentEvent" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RentEvent" inverseName="property" inverseEntity="RentEvent" syncable="YES"/>
     </entity>
-    <entity name="RentEvent" syncable="YES">
+    <entity name="RentEvent" representedClassName="RentEvent" syncable="YES">
         <attribute name="deposit" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="moveInDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="moveOutDate" optional="YES" attributeType="Date" syncable="YES"/>
