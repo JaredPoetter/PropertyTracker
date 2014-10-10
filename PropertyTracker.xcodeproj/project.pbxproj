@@ -16,6 +16,7 @@
 		7F46400419E73EE50072A677 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F46400219E73EE50072A677 /* LaunchScreen.xib */; };
 		7F46401019E73EE50072A677 /* PropertyTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F46400F19E73EE50072A677 /* PropertyTrackerTests.m */; };
 		7F46401B19E741AA0072A677 /* PropertyTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F46401919E741AA0072A677 /* PropertyTracker.xcdatamodeld */; };
+		7F46401D19E7464C0072A677 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F46401C19E7464C0072A677 /* Main_iPhone.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		7F46400E19E73EE50072A677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F46400F19E73EE50072A677 /* PropertyTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropertyTrackerTests.m; sourceTree = "<group>"; };
 		7F46401A19E741AA0072A677 /* PropertyTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PropertyTracker.xcdatamodel; sourceTree = "<group>"; };
+		7F46401C19E7464C0072A677 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				7F463FFA19E73EE50072A677 /* TenantViewController.h */,
 				7F463FFB19E73EE50072A677 /* TenantViewController.m */,
 				7F463FFD19E73EE50072A677 /* Main.storyboard */,
+				7F46401C19E7464C0072A677 /* Main_iPhone.storyboard */,
 				7F46400019E73EE50072A677 /* Images.xcassets */,
 				7F46400219E73EE50072A677 /* LaunchScreen.xib */,
 				7F46401919E741AA0072A677 /* PropertyTracker.xcdatamodeld */,
@@ -207,6 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F46401D19E7464C0072A677 /* Main_iPhone.storyboard in Resources */,
 				7F463FFF19E73EE50072A677 /* Main.storyboard in Resources */,
 				7F46400419E73EE50072A677 /* LaunchScreen.xib in Resources */,
 				7F46400119E73EE50072A677 /* Images.xcassets in Resources */,
@@ -359,6 +363,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -370,6 +375,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
