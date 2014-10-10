@@ -11,8 +11,8 @@
 
 @interface PropertyViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
-@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
-@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+//@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+//@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @end
 

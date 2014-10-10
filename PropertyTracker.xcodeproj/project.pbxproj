@@ -23,6 +23,7 @@
 		7FAA187419E7679C006DF56F /* Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAA187319E7679C006DF56F /* Picture.m */; };
 		7FAA187719E7679C006DF56F /* RentEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAA187619E7679C006DF56F /* RentEvent.m */; };
 		7FAA187A19E7679D006DF56F /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAA187919E7679D006DF56F /* Person.m */; };
+		7FAA187E19E85950006DF56F /* AddPropertyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAA187D19E85950006DF56F /* AddPropertyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		7FAA187619E7679C006DF56F /* RentEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RentEvent.m; sourceTree = "<group>"; };
 		7FAA187819E7679C006DF56F /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		7FAA187919E7679D006DF56F /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		7FAA187C19E85950006DF56F /* AddPropertyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPropertyViewController.h; sourceTree = "<group>"; };
+		7FAA187D19E85950006DF56F /* AddPropertyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPropertyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,10 +112,8 @@
 			children = (
 				7F463FF419E73EE50072A677 /* AppDelegate.h */,
 				7F463FF519E73EE50072A677 /* AppDelegate.m */,
-				7F463FF719E73EE50072A677 /* PropertyViewController.h */,
-				7F463FF819E73EE50072A677 /* PropertyViewController.m */,
-				7F463FFA19E73EE50072A677 /* TenantViewController.h */,
-				7F463FFB19E73EE50072A677 /* TenantViewController.m */,
+				7FAA187F19E85957006DF56F /* Property */,
+				7FAA188019E8595E006DF56F /* Tenant */,
 				7F463FFD19E73EE50072A677 /* Main.storyboard */,
 				7F46401C19E7464C0072A677 /* Main_iPhone.storyboard */,
 				7F46400019E73EE50072A677 /* Images.xcassets */,
@@ -165,6 +166,26 @@
 				7FAA186D19E7679B006DF56F /* Property.m */,
 			);
 			name = "Database Classes";
+			sourceTree = "<group>";
+		};
+		7FAA187F19E85957006DF56F /* Property */ = {
+			isa = PBXGroup;
+			children = (
+				7F463FF719E73EE50072A677 /* PropertyViewController.h */,
+				7F463FF819E73EE50072A677 /* PropertyViewController.m */,
+				7FAA187C19E85950006DF56F /* AddPropertyViewController.h */,
+				7FAA187D19E85950006DF56F /* AddPropertyViewController.m */,
+			);
+			name = Property;
+			sourceTree = "<group>";
+		};
+		7FAA188019E8595E006DF56F /* Tenant */ = {
+			isa = PBXGroup;
+			children = (
+				7F463FFA19E73EE50072A677 /* TenantViewController.h */,
+				7F463FFB19E73EE50072A677 /* TenantViewController.m */,
+			);
+			name = Tenant;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +296,7 @@
 				7FAA187719E7679C006DF56F /* RentEvent.m in Sources */,
 				7FAA186E19E7679B006DF56F /* Property.m in Sources */,
 				7FAA187119E7679C006DF56F /* Payment.m in Sources */,
+				7FAA187E19E85950006DF56F /* AddPropertyViewController.m in Sources */,
 				7F46401B19E741AA0072A677 /* PropertyTracker.xcdatamodeld in Sources */,
 				7F463FF919E73EE50072A677 /* PropertyViewController.m in Sources */,
 				7F463FF319E73EE50072A677 /* main.m in Sources */,
