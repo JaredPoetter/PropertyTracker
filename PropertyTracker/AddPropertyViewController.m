@@ -12,13 +12,16 @@
 @implementation AddPropertyViewController
 
 - (void) viewDidLoad {
-    NSLog(@"dslkjflk");
-//    [self.view setUserInteractionEnabled:YES];
+    //Setting all of the UITextField's Delegate
+    self.propertyCity.delegate = self;
+    self.propertyHouseNumber.delegate = self;
+    self.propertyStreetName.delegate = self;
+    
+    //    [self.view setUserInteractionEnabled:YES];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                           action:@selector(singleTapAction:)];
     tap.numberOfTapsRequired = 1;
-//    tap.delegate = self;
     [self.view addGestureRecognizer:tap];
 }
 
@@ -27,6 +30,18 @@
 - (void)singleTapAction:(UIGestureRecognizer *)gesture {
     NSLog(@"dslkjflk");
     [self.view endEditing:YES];
+}
+
+#pragma mark Keyboard
+
+-(BOOL) textFieldShouldReturn:(UITextField *)textField{
+    if(textField.returnKeyType == UIReturnKeyNext) {
+        UIView *next = [[textField superview] viewWithTag:textField.tag+1];
+        [next becomeFirstResponder];
+    } else if (textField.returnKeyType == UIReturnKeyDone) {
+        [textField resignFirstResponder];
+    }
+    return YES;
 }
 
 #pragma mark Buttons

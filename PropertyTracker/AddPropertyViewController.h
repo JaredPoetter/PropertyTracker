@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
-@interface AddPropertyViewController : UIViewController
+@interface AddPropertyViewController : UIViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *propertyCity;
 @property (weak, nonatomic) IBOutlet UITextField *propertyHouseNumber;

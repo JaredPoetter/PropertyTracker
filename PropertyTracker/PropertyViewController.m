@@ -10,6 +10,11 @@
 #import "AppDelegate.h"
 #import "Property.h"
 
+#define PROPERTY_TABLE_VIEW_CELL_ID @"PropertyCell_ID"
+
+// Property UITableViewCell Tags
+#define ADDRESS_LABEL 1
+
 @interface PropertyViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *propertyTableView;
@@ -129,20 +134,26 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *simpleTableIdentifier = @"PropertyCell_ID";
+//    static NSString *simpleTableIdentifier = PROPERTY_TABLE_VIEW_CELL_ID;
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
-    cell.backgroundColor = [UIColor redColor];
+//    cell.backgroundColor = [UIColor redColor];
     
+    //Checking to see if there is a cell to reuse
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:PROPERTY_TABLE_VIEW_CELL_ID];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                      reuseIdentifier:PROPERTY_TABLE_VIEW_CELL_ID];
     }
     
-//    cell.textLabel.text = [dummyData objectAtIndex:indexPath.row];
-//    cell.textLabel.text = [self.propertyStreetNames objectAtIndex:indexPath.row];
+    //Property object
     Property * property = (Property *) [self.properties objectAtIndex:indexPath.row];
-    cell.textLabel.text = property.streetName;
+    
+    //Address Label
+    UILabel * addressLabel = (UILabel *) [cell.contentView viewWithTag:ADDRESS_LABEL];
+    addressLabel.text = property.streetName;
+    
+//    cell.textLabel.text = property.streetName;
     return cell;
 }
 
