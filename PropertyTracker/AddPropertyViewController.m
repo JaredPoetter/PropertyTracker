@@ -9,6 +9,18 @@
 #import "AddPropertyViewController.h"
 #import "AppDelegate.h"
 
+//Property Object - Keys
+#define BATHS_KEY @"baths"
+#define BEDROOMS_KEY @"bedrooms"
+#define CITY_KEY @"city"
+#define HOUSE_NUMBER_KEY @"houseNumber"
+#define RENT_KEY @"rent"
+#define STATE_KEY @"state"
+#define STREET_NAME_KEY @"streetName"
+#define ZIP_CODE_KEY @"zipCode"
+#define PICTURE_KEY @"picture"
+#define RENT_EVENT_KEY @"rentEvent"
+
 @implementation AddPropertyViewController
 
 - (void) viewDidLoad {
@@ -16,9 +28,7 @@
     self.propertyCity.delegate = self;
     self.propertyHouseNumber.delegate = self;
     self.propertyStreetName.delegate = self;
-    
-    //    [self.view setUserInteractionEnabled:YES];
-    
+        
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                           action:@selector(singleTapAction:)];
     tap.numberOfTapsRequired = 1;
@@ -28,7 +38,6 @@
 #pragma mark Gestures
 
 - (void)singleTapAction:(UIGestureRecognizer *)gesture {
-    NSLog(@"dslkjflk");
     [self.view endEditing:YES];
 }
 
@@ -57,22 +66,33 @@
     //TODO: put all the information from the fields into Core Data
     NSLog(@"User wants the data");
     
+    //Getting the AppDelegate and other things for Core Data
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    
     NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    
+    //Creating a new Property object from CoreData
     NSManagedObject *newProperty;
     newProperty = [NSEntityDescription insertNewObjectForEntityForName:@"Property" inManagedObjectContext:context];
-    [newProperty setValue: self.propertyStreetName.text forKey:@"streetName"];
-    [newProperty setValue: self.propertyCity.text forKey:@"city"];
-//    [newProperty setValue: self.propertyHouseNumber.text forKey:@"houseNumber"];
+    [newProperty setValue:self.propertyStreetName.text
+                   forKey:STREET_NAME_KEY];
+    [newProperty setValue:self.propertyCity.text
+                   forKey:CITY_KEY];
+    [newProperty setValue:self.propertyState.text
+                   forKey:STATE_KEY];
+    [newProperty setValue:[NSNumber numberWithInteger: [self.propertyBaths.text integerValue]]
+                   forKey:BATHS_KEY];
+    [newProperty setValue:[NSNumber numberWithInteger: [self.propertyHouseNumber.text integerValue]]
+                   forKey:HOUSE_NUMBER_KEY];
+    [newProperty setValue:[NSNumber numberWithInteger: [self.propertyBedrooms.text integerValue]]
+                   forKey:BEDROOMS_KEY];
+    [newProperty setValue:[NSNumber numberWithInteger: [self.propertyRent.text integerValue]]
+                   forKey:RENT_KEY];
+    [newProperty setValue:[NSNumber numberWithInteger: [self.propertyZipCode.text integerValue]]
+                   forKey:ZIP_CODE_KEY];
     
-//    [self.propertyStreetNames addObject:@"Hwy 13"];
-    //    [newContact setValue: @"(555) 555 - 5555" forKey:@"phone"];
-    //    [self.phone addObject:@"(555) 555 - 5555"];
     NSError *error;
     [context save:&error];
-//    [self.propertyTableView reloadData];
-    
+
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

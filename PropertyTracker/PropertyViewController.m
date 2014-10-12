@@ -13,13 +13,16 @@
 #define PROPERTY_TABLE_VIEW_CELL_ID @"PropertyCell_ID"
 
 // Property UITableViewCell Tags
-#define ADDRESS_LABEL 1
+#define ADDRESS_LABEL   1
+#define RENT_LABEL      2
+#define BEDROOMS_LABEL  3
+#define BATHS_LABEL     4
 
 @interface PropertyViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *propertyTableView;
 
-@property (strong, nonatomic) NSMutableArray * propertyStreetNames;
+//@property (strong, nonatomic) NSMutableArray * propertyStreetNames;
 
 @property (strong, nonatomic) NSArray * properties;
 
@@ -32,59 +35,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-    self.properties = [[NSArray alloc] init];
-    
-    self.propertyStreetNames = [[NSMutableArray alloc] init];
-    
-    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    NSManagedObjectContext *context = [appDelegate managedObjectContext];
-    NSEntityDescription *entityDesc = [NSEntityDescription entityForName:@"Property" inManagedObjectContext:context];
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    [request setEntity:entityDesc];
-    NSPredicate *pred =[NSPredicate predicateWithFormat:@"(streetName = %@)", @"Hwy 13"];
-    [request setPredicate:pred];
-    NSManagedObject *matches = nil;
-    
-    NSError *error;
-    NSArray *objects = [context executeFetchRequest:request
-                                              error:&error];
-    
-    if ([objects count] == 0)
-    {
-        NSLog(@"No matches");
-    }
-    else
-    {
-        for (int i = 0; i < [objects count]; i++)
-        {
-            matches = objects[i];
-            [self.propertyStreetNames addObject:[matches valueForKey:@"streetName"]];
-//            [self.phone addObject:[matches valueForKey:@"phone"]];
-        }
-    }
-    
-    
-//    dummyData = @[@"cell 1", @"cell 2", @"cell 3", @"cell 4", @"cell 5", @"cell 6"];
-    
-    
-    
-//    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-//    NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
-//    NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
-//    
-//    // If appropriate, configure the new managed object.
-//    // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-//    [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
-//    
-//    // Save the context.
-//    NSError *error = nil;
-//    if (![context save:&error]) {
-//        // Replace this implementation with code to handle the error appropriately.
-//        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-//        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-//        abort();
-//    }
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    //Reloading the TableView
+    [self reload:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -99,14 +54,12 @@
 }
 
 - (IBAction)reload:(id)sender {
+    //Getting the AppDelegate and CoreData stuff
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = [appDelegate managedObjectContext];
     NSEntityDescription *entityDesc = [NSEntityDescription entityForName:@"Property" inManagedObjectContext:context];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     [request setEntity:entityDesc];
-//    NSPredicate *pred =[NSPredicate predicateWithFormat:@"(streetName = %@)", @"Hwy 13"];
-//    [request setPredicate:pred];
-//    NSManagedObject *matches = nil;
     
     NSError *error;
     NSArray *objects = [context executeFetchRequest:request
@@ -127,18 +80,9 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.properties.count;
-    
-    //    return self.propertyStreetNames.count;
-    
-    //    return dummyData.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    static NSString *simpleTableIdentifier = PROPERTY_TABLE_VIEW_CELL_ID;
-    
-    
-//    cell.backgroundColor = [UIColor redColor];
-    
     //Checking to see if there is a cell to reuse
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:PROPERTY_TABLE_VIEW_CELL_ID];
     if (cell == nil) {
@@ -151,9 +95,22 @@
     
     //Address Label
     UILabel * addressLabel = (UILabel *) [cell.contentView viewWithTag:ADDRESS_LABEL];
-    addressLabel.text = property.streetName;
+    addressLabel.text = [NSString stringWithFormat:@"Address:\n%@ %@\n%@, %@ %@",
+                         property.houseNumber, property.streetName,
+                         property.city, property.state, property.zipCode];
     
-//    cell.textLabel.text = property.streetName;
+    //Rent Label
+    UILabel * rentLabel = (UILabel *) [cell.contentView viewWithTag:RENT_LABEL];
+    rentLabel.text = [NSString stringWithFormat:@"Rent: %@", property.rent];
+    
+    //Bedrooms Label
+    UILabel * bedroomsLabel = (UILabel *) [cell.contentView viewWithTag:BEDROOMS_LABEL];
+    bedroomsLabel.text = [NSString stringWithFormat:@"Bedrooms: %@", property.bedrooms];
+    
+    //Baths Label
+    UILabel * bathsLabel = (UILabel *) [cell.contentView viewWithTag:BATHS_LABEL];
+    bathsLabel.text = [NSString stringWithFormat:@"Baths: %@", property.baths];
+    
     return cell;
 }
 

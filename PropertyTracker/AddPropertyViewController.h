@@ -14,5 +14,10 @@
 @property (weak, nonatomic) IBOutlet UITextField *propertyCity;
 @property (weak, nonatomic) IBOutlet UITextField *propertyHouseNumber;
 @property (weak, nonatomic) IBOutlet UITextField *propertyStreetName;
+@property (weak, nonatomic) IBOutlet UITextField *propertyState;
+@property (weak, nonatomic) IBOutlet UITextField *propertyZipCode;
+@property (weak, nonatomic) IBOutlet UITextField *propertyBaths;
+@property (weak, nonatomic) IBOutlet UITextField *propertyBedrooms;
+@property (weak, nonatomic) IBOutlet UITextField *propertyRent;
 
 @end
