@@ -19,6 +19,11 @@
 		7F46401D19E7464C0072A677 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F46401C19E7464C0072A677 /* Main_iPhone.storyboard */; };
 		7FA9ADB419EAEFC5007E609A /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9ADB319EAEFC5007E609A /* SettingsViewController.m */; };
 		7FA9ADB719EAF2B9007E609A /* Property_Tab_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FA9ADB619EAF2B9007E609A /* Property_Tab_Icon.png */; };
+		7FA9ADBA19EB27F6007E609A /* Property_Tab_Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FA9ADB919EB27F6007E609A /* Property_Tab_Icon@2x.png */; };
+		7FA9ADBF19EB2936007E609A /* Settings_Tab_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FA9ADBB19EB2936007E609A /* Settings_Tab_Icon.png */; };
+		7FA9ADC019EB2936007E609A /* Tenat_Tab_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FA9ADBC19EB2936007E609A /* Tenat_Tab_Icon.png */; };
+		7FA9ADC119EB2936007E609A /* Settings_Tab_Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FA9ADBD19EB2936007E609A /* Settings_Tab_Icon@2x.png */; };
+		7FA9ADC219EB2936007E609A /* Tenat_Tab_Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FA9ADBE19EB2936007E609A /* Tenat_Tab_Icon@2x.png */; };
 		7FAA186B19E76728006DF56F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FAA186A19E76728006DF56F /* CoreData.framework */; };
 		7FAA186E19E7679B006DF56F /* Property.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAA186D19E7679B006DF56F /* Property.m */; };
 		7FAA187119E7679C006DF56F /* Payment.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAA187019E7679C006DF56F /* Payment.m */; };
@@ -59,6 +64,11 @@
 		7FA9ADB219EAEFC5007E609A /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		7FA9ADB319EAEFC5007E609A /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		7FA9ADB619EAF2B9007E609A /* Property_Tab_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Property_Tab_Icon.png; sourceTree = "<group>"; };
+		7FA9ADB919EB27F6007E609A /* Property_Tab_Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Property_Tab_Icon@2x.png"; sourceTree = "<group>"; };
+		7FA9ADBB19EB2936007E609A /* Settings_Tab_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Settings_Tab_Icon.png; sourceTree = "<group>"; };
+		7FA9ADBC19EB2936007E609A /* Tenat_Tab_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tenat_Tab_Icon.png; sourceTree = "<group>"; };
+		7FA9ADBD19EB2936007E609A /* Settings_Tab_Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings_Tab_Icon@2x.png"; sourceTree = "<group>"; };
+		7FA9ADBE19EB2936007E609A /* Tenat_Tab_Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tenat_Tab_Icon@2x.png"; sourceTree = "<group>"; };
 		7FAA186A19E76728006DF56F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		7FAA186C19E7679B006DF56F /* Property.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Property.h; sourceTree = "<group>"; };
 		7FAA186D19E7679B006DF56F /* Property.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Property.m; sourceTree = "<group>"; };
@@ -170,9 +180,46 @@
 		7FA9ADB819EAF2C5007E609A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7FA9ADB619EAF2B9007E609A /* Property_Tab_Icon.png */,
+				7FA9ADC319EB2943007E609A /* Tab Icons */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		7FA9ADC319EB2943007E609A /* Tab Icons */ = {
+			isa = PBXGroup;
+			children = (
+				7FA9ADC419EB294D007E609A /* Settings */,
+				7FA9ADC519EB2954007E609A /* Tenant */,
+				7FA9ADC619EB2960007E609A /* Property */,
+			);
+			name = "Tab Icons";
+			sourceTree = "<group>";
+		};
+		7FA9ADC419EB294D007E609A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				7FA9ADBB19EB2936007E609A /* Settings_Tab_Icon.png */,
+				7FA9ADBD19EB2936007E609A /* Settings_Tab_Icon@2x.png */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		7FA9ADC519EB2954007E609A /* Tenant */ = {
+			isa = PBXGroup;
+			children = (
+				7FA9ADBC19EB2936007E609A /* Tenat_Tab_Icon.png */,
+				7FA9ADBE19EB2936007E609A /* Tenat_Tab_Icon@2x.png */,
+			);
+			name = Tenant;
+			sourceTree = "<group>";
+		};
+		7FA9ADC619EB2960007E609A /* Property */ = {
+			isa = PBXGroup;
+			children = (
+				7FA9ADB619EAF2B9007E609A /* Property_Tab_Icon.png */,
+				7FA9ADB919EB27F6007E609A /* Property_Tab_Icon@2x.png */,
+			);
+			name = Property;
 			sourceTree = "<group>";
 		};
 		7FAA187B19E767A3006DF56F /* Database Classes */ = {
@@ -293,10 +340,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FA9ADB719EAF2B9007E609A /* Property_Tab_Icon.png in Resources */,
+				7FA9ADBF19EB2936007E609A /* Settings_Tab_Icon.png in Resources */,
+				7FA9ADC219EB2936007E609A /* Tenat_Tab_Icon@2x.png in Resources */,
 				7F46401D19E7464C0072A677 /* Main_iPhone.storyboard in Resources */,
 				7F463FFF19E73EE50072A677 /* Main.storyboard in Resources */,
 				7F46400419E73EE50072A677 /* LaunchScreen.xib in Resources */,
+				7FA9ADC119EB2936007E609A /* Settings_Tab_Icon@2x.png in Resources */,
+				7FA9ADBA19EB27F6007E609A /* Property_Tab_Icon@2x.png in Resources */,
 				7F46400119E73EE50072A677 /* Images.xcassets in Resources */,
+				7FA9ADC019EB2936007E609A /* Tenat_Tab_Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

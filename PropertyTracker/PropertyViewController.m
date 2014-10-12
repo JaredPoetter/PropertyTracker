@@ -83,6 +83,14 @@
     //Property object
     Property * property = (Property *) [self.properties objectAtIndex:indexPath.row];
     
+    //Vacancy
+    if ([property.rentEvent allObjects].count == 0) {
+        cell.backgroundColor = [UIColor colorWithRed:0.9 green:1.0 blue:0.9 alpha:1.0]; //green
+    }
+    else {
+        cell.backgroundColor = [UIColor colorWithRed:1.0 green:0.9 blue:0.9 alpha:1.0]; //red
+    }
+    
     //Address Label
     UILabel * addressLabel = (UILabel *) [cell.contentView viewWithTag:ADDRESS_LABEL];
     addressLabel.text = [NSString stringWithFormat:@"Address:\n%@ %@\n%@, %@ %@",

@@ -344,7 +344,7 @@
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Tenant" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Tenant" image="Tenat_Tab_Icon.png" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -388,7 +388,7 @@
                             <constraint firstAttribute="centerY" secondItem="SNA-5h-bbd" secondAttribute="centerY" constant="0.5" id="thW-So-YE9"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="xbZ-RS-dOE"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="Settings_Tab_Icon.png" id="xbZ-RS-dOE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dEk-hN-cNe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -418,7 +418,7 @@
         <scene sceneID="6Lz-KG-Ehb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="djr-ZC-I4q" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Property" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Property" image="Property_Tab_Icon.png" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eai-an-39r">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -435,7 +435,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="Property_Tab_Icon.png" width="30" height="27"/>
+        <image name="Settings_Tab_Icon.png" width="30" height="30"/>
+        <image name="Tenat_Tab_Icon.png" width="30" height="30"/>
     </resources>
 </document>
