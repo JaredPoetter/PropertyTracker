@@ -7,7 +7,14 @@
 //
 
 #import "SettingsViewController.h"
+#import "AppDelegate.h"
 
 @implementation SettingsViewController
+
+- (IBAction)deleteDatabase:(id)sender {
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    [appDelegate flushDatabase];
+//    [self.propertyTableView reloadData];
+}
 
 @end

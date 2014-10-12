@@ -49,10 +49,6 @@
 
 #pragma mark Navigation Bar
 
-- (IBAction)addProperty:(id)sender {
-    
-}
-
 - (IBAction)reload:(id)sender {
     //Getting the AppDelegate and CoreData stuff
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
@@ -67,12 +63,6 @@
     
     self.properties = objects;
     
-    [self.propertyTableView reloadData];
-}
-
-- (IBAction)deleteDatabase:(id)sender {
-    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    [appDelegate flushDatabase];
     [self.propertyTableView reloadData];
 }
 

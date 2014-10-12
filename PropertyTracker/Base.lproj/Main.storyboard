@@ -86,21 +86,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="2VD-oE-jHO">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="FUP-sy-DJr">
-                            <connections>
-                                <action selector="reload:" destination="9pv-A4-QxB" id="Q07-VL-bYl"/>
-                            </connections>
-                        </barButtonItem>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ygZ-Yp-Pg7">
-                            <rect key="frame" x="180" y="7" width="240" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Delete Database">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="deleteDatabase:" destination="9pv-A4-QxB" eventType="touchUpInside" id="YTE-XB-Z1l"/>
-                            </connections>
-                        </button>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="kep-bO-2uB">
                             <connections>
                                 <action selector="addProperty:" destination="9pv-A4-QxB" id="oEr-LG-aV4"/>
@@ -387,6 +372,15 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcs-aT-cs2">
+                                <rect key="frame" x="16" y="70" width="114" height="30"/>
+                                <state key="normal" title="Delete Database">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteDatabase:" destination="Sg6-Am-K0v" eventType="touchUpInside" id="LM3-mW-vf2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
