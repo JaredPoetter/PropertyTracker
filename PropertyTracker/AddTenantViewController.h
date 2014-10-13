@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddTenantViewController : UIViewController
+@interface AddTenantViewController : UIViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *tenantFirstName;
 @property (weak, nonatomic) IBOutlet UITextField *tenantLastName;
