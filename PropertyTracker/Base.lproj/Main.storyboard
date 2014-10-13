@@ -432,10 +432,10 @@
             </objects>
             <point key="canvasLocation" x="2472" y="-664"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Tenant View Controller-->
         <scene sceneID="aSy-D9-aqQ">
             <objects>
-                <viewController id="JvK-9t-GMn" sceneMemberID="viewController">
+                <viewController id="JvK-9t-GMn" customClass="AddTenantViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HN8-kU-ODH"/>
                         <viewControllerLayoutGuide type="bottom" id="7Ji-wI-mdu"/>
