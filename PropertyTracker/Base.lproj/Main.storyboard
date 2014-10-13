@@ -588,6 +588,15 @@
                             <constraint firstItem="7vX-LY-TjG" firstAttribute="leading" secondItem="bYl-yr-Zmd" secondAttribute="trailing" constant="8" id="y9v-n8-V9S"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tenantCellPhoneNumber" destination="7T9-hc-Az5" id="I5v-Wk-bO8"/>
+                        <outlet property="tenantEmail" destination="7vX-LY-TjG" id="71n-KH-QDu"/>
+                        <outlet property="tenantEmployer" destination="DAC-V9-e71" id="tOU-dB-PH1"/>
+                        <outlet property="tenantFirstName" destination="c7A-Cs-3KC" id="NRo-Cp-Swb"/>
+                        <outlet property="tenantHouseNumber" destination="REG-nz-bSl" id="n10-yz-kZx"/>
+                        <outlet property="tenantLastName" destination="Ipf-wW-xhd" id="Zn3-Ov-7pV"/>
+                        <outlet property="tenantWorkNumber" destination="Iaq-uE-nJW" id="pa5-97-DRc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wa0-bR-Cmr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
