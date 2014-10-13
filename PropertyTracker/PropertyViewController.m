@@ -9,6 +9,7 @@
 #import "PropertyViewController.h"
 #import "AppDelegate.h"
 #import "PropertyDetailViewController.h"
+#import "Property.h"
 
 #define PROPERTY_TABLE_VIEW_CELL_ID @"PropertyCell_ID"
 
@@ -123,8 +124,10 @@
 {
 //    NSLog(@"prepareForSegue");
     NSIndexPath *indexPath = self.propertyTableView.indexPathForSelectedRow;
-    PropertyDetailViewController * propertyDetailVC = (PropertyDetailViewController *) segue.destinationViewController;
-    propertyDetailVC.property = self.properties[indexPath.row];
+    if ([segue.destinationViewController isKindOfClass:[PropertyDetailViewController class]]) {
+        PropertyDetailViewController * propertyDetailVC = (PropertyDetailViewController *) segue.destinationViewController;
+        propertyDetailVC.property = self.properties[indexPath.row];
+    }
 }
 
 @end

@@ -18,13 +18,13 @@
                               self.property.city, self.property.state, self.property.zipCode];
     
     //Rent Label
-    self.rentLabel.text = [NSString stringWithFormat:@"Rent: %@", self.property.rent];
+    self.rentLabel.text = [NSString stringWithFormat:@"%@", self.property.rent];
     
     //Bedrooms Label
-    self.bedroomsLabel.text = [NSString stringWithFormat:@"Bedrooms: %@", self.property.bedrooms];
+    self.bedroomsLabel.text = [NSString stringWithFormat:@"%@", self.property.bedrooms];
     
     //Baths Label
-    self.bathsLabel.text = [NSString stringWithFormat:@"Baths: %@", self.property.baths];
+    self.bathsLabel.text = [NSString stringWithFormat:@"%@", self.property.baths];
 
 }
 
