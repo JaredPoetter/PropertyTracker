@@ -28,6 +28,11 @@
     self.propertyCity.delegate = self;
     self.propertyHouseNumber.delegate = self;
     self.propertyStreetName.delegate = self;
+    self.propertyBaths.delegate = self;
+    self.propertyBedrooms.delegate = self;
+    self.propertyRent.delegate = self;
+    self.propertyZipCode.delegate = self;
+    self.propertyState.delegate = self;
         
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                           action:@selector(singleTapAction:)];
