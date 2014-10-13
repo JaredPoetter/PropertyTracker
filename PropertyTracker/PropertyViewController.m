@@ -8,7 +8,7 @@
 
 #import "PropertyViewController.h"
 #import "AppDelegate.h"
-#import "Property.h"
+#import "PropertyDetailViewController.h"
 
 #define PROPERTY_TABLE_VIEW_CELL_ID @"PropertyCell_ID"
 
@@ -20,7 +20,7 @@
 
 @interface PropertyViewController ()
 
-@property (weak, nonatomic) IBOutlet UITableView *propertyTableView;
+@property (weak, nonatomic) IBOutlet UITableView * propertyTableView;
 
 //@property (strong, nonatomic) NSMutableArray * propertyStreetNames;
 
@@ -72,10 +72,6 @@
     return self.properties.count;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-}
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     //Checking to see if there is a cell to reuse
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:PROPERTY_TABLE_VIEW_CELL_ID];
@@ -114,6 +110,21 @@
     bathsLabel.text = [NSString stringWithFormat:@"Baths: %@", property.baths];
     
     return cell;
+}
+
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    NSLog(@"didSelectRowAtIndexPath");
+//    self.property = [self.properties objectAtIndex:indexPath.row];
+//    [self performSegueWithIdentifier:@"PropertyDetailView_ID" sender:self];
+//}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+//    NSLog(@"prepareForSegue");
+    NSIndexPath *indexPath = self.propertyTableView.indexPathForSelectedRow;
+    PropertyDetailViewController * propertyDetailVC = (PropertyDetailViewController *) segue.destinationViewController;
+    propertyDetailVC.property = self.properties[indexPath.row];
 }
 
 @end

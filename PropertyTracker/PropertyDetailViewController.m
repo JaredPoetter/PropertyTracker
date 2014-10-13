@@ -10,6 +10,22 @@
 
 @implementation PropertyDetailViewController
 
+- (void)viewDidLoad {
+    //Setting the labels
+    //Address Label
+    self.addressLabel.text = [NSString stringWithFormat:@"%@ %@\n%@, %@ %@",
+                              self.property.houseNumber, self.property.streetName,
+                              self.property.city, self.property.state, self.property.zipCode];
+    
+    //Rent Label
+    self.rentLabel.text = [NSString stringWithFormat:@"Rent: %@", self.property.rent];
+    
+    //Bedrooms Label
+    self.bedroomsLabel.text = [NSString stringWithFormat:@"Bedrooms: %@", self.property.bedrooms];
+    
+    //Baths Label
+    self.bathsLabel.text = [NSString stringWithFormat:@"Baths: %@", self.property.baths];
 
+}
 
 @end
