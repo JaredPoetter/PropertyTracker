@@ -28,9 +28,9 @@
     self.tenantEmail.delegate = self;
     self.tenantEmployer.delegate = self;
     self.tenantFirstName.delegate = self;
-    self.tenantHouseNumber.delegate = self;
+    self.tenantHousePhoneNumber.delegate = self;
     self.tenantLastName.delegate = self;
-    self.tenantWorkNumber.delegate = self;
+    self.tenantWorkPhoneNumber.delegate = self;
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                           action:@selector(singleTapAction:)];
@@ -84,11 +84,11 @@
                  forKey:EMPLOYER_KEY];
     [newPerson setValue:self.tenantFirstName.text
                  forKey:FIRST_NAME_KEY];
-    [newPerson setValue:self.tenantHouseNumber.text
+    [newPerson setValue:self.tenantHousePhoneNumber.text
                  forKey:HOUSE_PHONE_NUMBER_KEY];
     [newPerson setValue:self.tenantLastName.text
                  forKey:LAST_NAME_KEY];
-    [newPerson setValue:self.tenantWorkNumber.text
+    [newPerson setValue:self.tenantWorkPhoneNumber.text
                  forKey:WORK_PHONE_NUMBER];
     
     NSError *error;

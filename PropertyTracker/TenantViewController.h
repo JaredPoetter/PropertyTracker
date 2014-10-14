@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
-@interface TenantViewController : UIViewController
+@interface TenantViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
-//@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
-//@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) IBOutlet UITableView * tenantTableView;
+@property (strong, nonatomic) NSArray * tenants;
 
 @end
 

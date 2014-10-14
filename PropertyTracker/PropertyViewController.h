@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
-#import "Property.h"
+//#import "Property.h"
 
 @interface PropertyViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 

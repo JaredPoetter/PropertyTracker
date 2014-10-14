@@ -21,7 +21,7 @@
 
 @interface PropertyViewController ()
 
-@property (weak, nonatomic) IBOutlet UITableView * propertyTableView;
+@property (strong, nonatomic) IBOutlet UITableView * propertyTableView;
 
 //@property (strong, nonatomic) NSMutableArray * propertyStreetNames;
 

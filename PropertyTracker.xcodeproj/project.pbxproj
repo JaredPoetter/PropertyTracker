@@ -26,6 +26,7 @@
 		7FA9ADC219EB2936007E609A /* Tenat_Tab_Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FA9ADBE19EB2936007E609A /* Tenat_Tab_Icon@2x.png */; };
 		7FA9ADC919EB2B85007E609A /* PropertyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9ADC819EB2B85007E609A /* PropertyDetailViewController.m */; };
 		7FA9ADCC19EC8C27007E609A /* AddTenantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9ADCB19EC8C27007E609A /* AddTenantViewController.m */; };
+		7FA9ADCF19ECAF16007E609A /* TenantDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9ADCE19ECAF16007E609A /* TenantDetailViewController.m */; };
 		7FAA186B19E76728006DF56F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FAA186A19E76728006DF56F /* CoreData.framework */; };
 		7FAA186E19E7679B006DF56F /* Property.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAA186D19E7679B006DF56F /* Property.m */; };
 		7FAA187119E7679C006DF56F /* Payment.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAA187019E7679C006DF56F /* Payment.m */; };
@@ -75,6 +76,8 @@
 		7FA9ADC819EB2B85007E609A /* PropertyDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyDetailViewController.m; sourceTree = "<group>"; };
 		7FA9ADCA19EC8C27007E609A /* AddTenantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTenantViewController.h; sourceTree = "<group>"; };
 		7FA9ADCB19EC8C27007E609A /* AddTenantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTenantViewController.m; sourceTree = "<group>"; };
+		7FA9ADCD19ECAF16007E609A /* TenantDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TenantDetailViewController.h; sourceTree = "<group>"; };
+		7FA9ADCE19ECAF16007E609A /* TenantDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TenantDetailViewController.m; sourceTree = "<group>"; };
 		7FAA186A19E76728006DF56F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		7FAA186C19E7679B006DF56F /* Property.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Property.h; sourceTree = "<group>"; };
 		7FAA186D19E7679B006DF56F /* Property.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Property.m; sourceTree = "<group>"; };
@@ -265,6 +268,8 @@
 				7F463FFB19E73EE50072A677 /* TenantViewController.m */,
 				7FA9ADCA19EC8C27007E609A /* AddTenantViewController.h */,
 				7FA9ADCB19EC8C27007E609A /* AddTenantViewController.m */,
+				7FA9ADCD19ECAF16007E609A /* TenantDetailViewController.h */,
+				7FA9ADCE19ECAF16007E609A /* TenantDetailViewController.m */,
 			);
 			name = Tenant;
 			sourceTree = "<group>";
@@ -389,6 +394,7 @@
 				7FAA187E19E85950006DF56F /* AddPropertyViewController.m in Sources */,
 				7F46401B19E741AA0072A677 /* PropertyTracker.xcdatamodeld in Sources */,
 				7F463FF919E73EE50072A677 /* PropertyViewController.m in Sources */,
+				7FA9ADCF19ECAF16007E609A /* TenantDetailViewController.m in Sources */,
 				7F463FF319E73EE50072A677 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
