@@ -754,7 +754,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Hfl-Oy-91N">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Hfl-Oy-91N">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -857,6 +857,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="Hfl-Oy-91N" secondAttribute="bottom" id="CgJ-rk-wUD"/>
+                            <constraint firstItem="Hfl-Oy-91N" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-16" id="Vwg-bQ-3D9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Hfl-Oy-91N" secondAttribute="trailing" constant="-16" id="dJb-UC-ksR"/>
+                            <constraint firstItem="Hfl-Oy-91N" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="-64" id="fTP-WI-oCG"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qHN-6D-k4t">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Pc4-5w-B0S">

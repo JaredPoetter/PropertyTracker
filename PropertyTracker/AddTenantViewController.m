@@ -91,8 +91,12 @@
     [newPerson setValue:self.tenantWorkPhoneNumber.text
                  forKey:WORK_PHONE_NUMBER];
     
-    NSError *error;
-    [context save:&error];
+    //Saving
+    NSError *error = nil;
+    if ([context save:&error] == NO) {
+        NSAssert(NO, @"Save should not fail\n%@", [error localizedDescription]);
+        abort();
+    }
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }

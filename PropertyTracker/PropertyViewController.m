@@ -36,11 +36,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    //Setting up the table view
+    self.propertyTableView.allowsMultipleSelectionDuringEditing = NO;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     //Reloading the TableView
-    [self reload:nil];
+    [self reload];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,7 +53,7 @@
 
 #pragma mark Navigation Bar
 
-- (IBAction)reload:(id)sender {
+- (IBAction)reload{
     //Getting the AppDelegate and CoreData stuff
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = [appDelegate managedObjectContext];
@@ -111,6 +114,33 @@
     bathsLabel.text = [NSString stringWithFormat:@"Baths: %@", property.baths];
     
     return cell;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    //Delete Button
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        //Getting the context
+        AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+        NSManagedObjectContext *context = [appDelegate managedObjectContext];
+        NSManagedObject * deleteObject = [context objectRegisteredForID:[[self.properties objectAtIndex:indexPath.row] objectID]];
+
+        //Deleting the object
+        [context deleteObject:deleteObject];
+        
+        //Saving changes
+        NSError *error = nil;
+        if ([context save:&error] == NO) {
+            NSAssert(NO, @"Save should not fail\n%@", [error localizedDescription]);
+            abort();
+        }
+    }
+    
+    //Reloading table view
+    [self reload];
 }
 
 //- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

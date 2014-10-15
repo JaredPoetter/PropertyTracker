@@ -95,9 +95,13 @@
     [newProperty setValue:[NSNumber numberWithInteger: [self.propertyZipCode.text integerValue]]
                    forKey:ZIP_CODE_KEY];
     
-    NSError *error;
-    [context save:&error];
-
+    //Saving
+    NSError *error = nil;
+    if ([context save:&error] == NO) {
+        NSAssert(NO, @"Save should not fail\n%@", [error localizedDescription]);
+        abort();
+    }
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

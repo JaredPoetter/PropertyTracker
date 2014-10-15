@@ -28,6 +28,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    //Setting up the table view
+    self.tenantTableView.allowsMultipleSelectionDuringEditing = NO;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -77,6 +80,7 @@
     Person * person = (Person *) [self.tenants objectAtIndex:indexPath.row];
     
     //Paid Up or Not
+    cell.backgroundColor = [UIColor colorWithRed:0.9 green:1.0 blue:0.9 alpha:1.0]; //green
     
     //Name Label
     UILabel * nameLabel = (UILabel *) [cell.contentView viewWithTag:NAME_LABEL];
@@ -103,6 +107,33 @@
 //    employerLabel.text = person.employer;
     
     return cell;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    //Delete Button
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        //Getting the context
+        AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+        NSManagedObjectContext *context = [appDelegate managedObjectContext];
+        NSManagedObject * deleteObject = [context objectRegisteredForID:[[self.tenants objectAtIndex:indexPath.row] objectID]];
+        
+        //Deleting the object
+        [context deleteObject:deleteObject];
+        
+        //Saving changes
+        NSError *error = nil;
+        if ([context save:&error] == NO) {
+            NSAssert(NO, @"Save should not fail\n%@", [error localizedDescription]);
+            abort();
+        }
+    }
+    
+    //Reloading table view
+    [self reload];
 }
 
 //- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
