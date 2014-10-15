@@ -89,6 +89,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="2VD-oE-jHO">
                         <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" title="Filter" id="Pen-61-tTl"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="kep-bO-2uB">
                             <connections>
                                 <action selector="addProperty:" destination="9pv-A4-QxB" id="oEr-LG-aV4"/>
@@ -865,6 +866,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qHN-6D-k4t">
+                        <barButtonItem key="leftBarButtonItem" title="Filter" id="S5Y-ch-MZA"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Pc4-5w-B0S">
                             <connections>
                                 <segue destination="JvK-9t-GMn" kind="presentation" id="Yji-y4-UHI"/>

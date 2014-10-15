@@ -53,7 +53,10 @@
 
 #pragma mark Navigation Bar
 
-- (IBAction)reload{
+
+#pragma mark UITableView
+
+- (void)reload{
     //Getting the AppDelegate and CoreData stuff
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = [appDelegate managedObjectContext];
@@ -69,8 +72,6 @@
     
     [self.propertyTableView reloadData];
 }
-
-#pragma mark UITableView
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.properties.count;
