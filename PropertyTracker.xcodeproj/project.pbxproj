@@ -16,7 +16,6 @@
 		7F46400419E73EE50072A677 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F46400219E73EE50072A677 /* LaunchScreen.xib */; };
 		7F46401019E73EE50072A677 /* PropertyTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F46400F19E73EE50072A677 /* PropertyTrackerTests.m */; };
 		7F46401B19E741AA0072A677 /* PropertyTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F46401919E741AA0072A677 /* PropertyTracker.xcdatamodeld */; };
-		7F46401D19E7464C0072A677 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F46401C19E7464C0072A677 /* Main_iPhone.storyboard */; };
 		7FA9ADB419EAEFC5007E609A /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9ADB319EAEFC5007E609A /* SettingsViewController.m */; };
 		7FA9ADB719EAF2B9007E609A /* Property_Tab_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FA9ADB619EAF2B9007E609A /* Property_Tab_Icon.png */; };
 		7FA9ADBA19EB27F6007E609A /* Property_Tab_Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FA9ADB919EB27F6007E609A /* Property_Tab_Icon@2x.png */; };
@@ -63,7 +62,6 @@
 		7F46400E19E73EE50072A677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F46400F19E73EE50072A677 /* PropertyTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropertyTrackerTests.m; sourceTree = "<group>"; };
 		7F46401A19E741AA0072A677 /* PropertyTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PropertyTracker.xcdatamodel; sourceTree = "<group>"; };
-		7F46401C19E7464C0072A677 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
 		7FA9ADB219EAEFC5007E609A /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		7FA9ADB319EAEFC5007E609A /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		7FA9ADB619EAF2B9007E609A /* Property_Tab_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Property_Tab_Icon.png; sourceTree = "<group>"; };
@@ -140,7 +138,6 @@
 				7FAA188019E8595E006DF56F /* Tenant */,
 				7FA9ADB519EAEFC9007E609A /* Settings */,
 				7F463FFD19E73EE50072A677 /* Main.storyboard */,
-				7F46401C19E7464C0072A677 /* Main_iPhone.storyboard */,
 				7F46400019E73EE50072A677 /* Images.xcassets */,
 				7F46400219E73EE50072A677 /* LaunchScreen.xib */,
 				7F46401919E741AA0072A677 /* PropertyTracker.xcdatamodeld */,
@@ -357,7 +354,6 @@
 				7FA9ADB719EAF2B9007E609A /* Property_Tab_Icon.png in Resources */,
 				7FA9ADBF19EB2936007E609A /* Settings_Tab_Icon.png in Resources */,
 				7FA9ADC219EB2936007E609A /* Tenat_Tab_Icon@2x.png in Resources */,
-				7F46401D19E7464C0072A677 /* Main_iPhone.storyboard in Resources */,
 				7F463FFF19E73EE50072A677 /* Main.storyboard in Resources */,
 				7F46400419E73EE50072A677 /* LaunchScreen.xib in Resources */,
 				7FA9ADC119EB2936007E609A /* Settings_Tab_Icon@2x.png in Resources */,

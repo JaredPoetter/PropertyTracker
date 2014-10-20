@@ -10,16 +10,16 @@
 #import "AppDelegate.h"
 
 //Property Object - Keys
-#define BATHS_KEY @"baths"
-#define BEDROOMS_KEY @"bedrooms"
-#define CITY_KEY @"city"
-#define HOUSE_NUMBER_KEY @"houseNumber"
-#define RENT_KEY @"rent"
-#define STATE_KEY @"state"
-#define STREET_NAME_KEY @"streetName"
-#define ZIP_CODE_KEY @"zipCode"
-#define PICTURE_KEY @"picture"
-#define RENT_EVENT_KEY @"rentEvent"
+#define BATHS_KEY           @"baths"
+#define BEDROOMS_KEY        @"bedrooms"
+#define CITY_KEY            @"city"
+#define HOUSE_NUMBER_KEY    @"houseNumber"
+#define RENT_KEY            @"rent"
+#define STATE_KEY           @"state"
+#define STREET_NAME_KEY     @"streetName"
+#define ZIP_CODE_KEY        @"zipCode"
+#define PICTURE_KEY         @"picture"
+#define RENT_EVENT_KEY      @"rentEvent"
 
 @implementation AddPropertyViewController
 
