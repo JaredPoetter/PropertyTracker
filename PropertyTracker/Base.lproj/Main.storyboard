@@ -5,10 +5,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Filter Property View Controller-->
         <scene sceneID="SVn-tr-edN">
             <objects>
-                <viewController id="fnQ-oU-EG4" sceneMemberID="viewController">
+                <viewController id="fnQ-oU-EG4" customClass="FilterPropertyViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NsS-xK-dz0"/>
                         <viewControllerLayoutGuide type="bottom" id="QFg-3Y-JCn"/>
@@ -26,9 +26,12 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kd-Uu-HAy">
                                 <rect key="frame" x="16" y="562" width="568" height="30"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Apply">
+                                <state key="normal" title="Apply Filter">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="applyFilter:" destination="fnQ-oU-EG4" eventType="touchUpInside" id="bzi-4O-aJw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9S-c4-IAj">
                                 <rect key="frame" x="16" y="524" width="568" height="30"/>
@@ -36,6 +39,9 @@
                                 <state key="normal" title="Clear Filter">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="clearFilter:" destination="fnQ-oU-EG4" eventType="touchUpInside" id="Van-a2-gsz"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House Number:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlP-et-hzd">
                                 <rect key="frame" x="16" y="49" width="121" height="21"/>
@@ -131,6 +137,9 @@
                                 <state key="normal" title="Cancel">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancel:" destination="fnQ-oU-EG4" eventType="touchUpInside" id="XBq-0a-83w"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

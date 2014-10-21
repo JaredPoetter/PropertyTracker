@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "FilterPropertyViewController.h"
 //#import "Property.h"
 
-@interface PropertyViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface PropertyViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, FilterPropertyViewControllerDelegate>
 
 //@property (strong, nonatomic) Property * property;
+
+//@property (strong, nonatomic) id delegate;
 
 @end
 

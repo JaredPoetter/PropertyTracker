@@ -9,6 +9,7 @@
 #import "PropertyViewController.h"
 #import "AppDelegate.h"
 #import "PropertyDetailViewController.h"
+#import "FilterPropertyViewController.h"
 #import "Property.h"
 
 #define PROPERTY_TABLE_VIEW_CELL_ID @"PropertyCell_ID"
@@ -159,6 +160,16 @@
         PropertyDetailViewController * propertyDetailVC = (PropertyDetailViewController *) segue.destinationViewController;
         propertyDetailVC.property = self.properties[indexPath.row];
     }
+    else if([segue.destinationViewController isKindOfClass:[FilterPropertyViewController class]]) {
+        FilterPropertyViewController * filterPropertyVC = (FilterPropertyViewController *) segue.destinationViewController;
+        filterPropertyVC.delegate = self;
+    }
+}
+
+#pragma mark Filter Property
+
+-(void) filterPropertyViewControllerDismissed:(NSString *)string {
+    NSLog(string);
 }
 
 @end

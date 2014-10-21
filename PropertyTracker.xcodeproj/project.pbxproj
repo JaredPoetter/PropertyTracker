@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F38FD1A19F5D7C600E82A73 /* FilterPropertyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F38FD1919F5D7C600E82A73 /* FilterPropertyViewController.m */; };
 		7F463FF319E73EE50072A677 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F463FF219E73EE50072A677 /* main.m */; };
 		7F463FF619E73EE50072A677 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F463FF519E73EE50072A677 /* AppDelegate.m */; };
 		7F463FF919E73EE50072A677 /* PropertyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F463FF819E73EE50072A677 /* PropertyViewController.m */; };
@@ -46,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F38FD1819F5D7C600E82A73 /* FilterPropertyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterPropertyViewController.h; sourceTree = "<group>"; };
+		7F38FD1919F5D7C600E82A73 /* FilterPropertyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterPropertyViewController.m; sourceTree = "<group>"; };
 		7F463FED19E73EE50072A677 /* PropertyTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PropertyTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F463FF119E73EE50072A677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F463FF219E73EE50072A677 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -254,6 +257,8 @@
 				7FAA187D19E85950006DF56F /* AddPropertyViewController.m */,
 				7FA9ADC719EB2B85007E609A /* PropertyDetailViewController.h */,
 				7FA9ADC819EB2B85007E609A /* PropertyDetailViewController.m */,
+				7F38FD1819F5D7C600E82A73 /* FilterPropertyViewController.h */,
+				7F38FD1919F5D7C600E82A73 /* FilterPropertyViewController.m */,
 			);
 			name = Property;
 			sourceTree = "<group>";
@@ -380,6 +385,7 @@
 				7FAA187419E7679C006DF56F /* Picture.m in Sources */,
 				7F463FFC19E73EE50072A677 /* TenantViewController.m in Sources */,
 				7FA9ADCC19EC8C27007E609A /* AddTenantViewController.m in Sources */,
+				7F38FD1A19F5D7C600E82A73 /* FilterPropertyViewController.m in Sources */,
 				7FAA187A19E7679D006DF56F /* Person.m in Sources */,
 				7FA9ADB419EAEFC5007E609A /* SettingsViewController.m in Sources */,
 				7F463FF619E73EE50072A677 /* AppDelegate.m in Sources */,
