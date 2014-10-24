@@ -27,6 +27,11 @@
         self.filterBedrooms.text = self.filterArray[BEDROOMS_INDEX];
         self.filterRent.text = self.filterArray[RENT_INDEX];
     }
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                          action:@selector(singleTapAction:)];
+    tap.numberOfTapsRequired = 1;
+    [self.view addGestureRecognizer:tap];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -54,6 +59,12 @@
             [self.delegate filterPropertyViewControllerDismissed:self.filterArray];
         }
     }
+}
+
+#pragma mark Gestures
+
+- (void)singleTapAction:(UIGestureRecognizer *)gesture {
+    [self.view endEditing:YES];
 }
 
 #pragma mark Buttons
