@@ -17,5 +17,8 @@
 
 //@property (strong, nonatomic) id delegate;
 
+@property (strong, nonatomic) NSMutableArray * filterArray;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *filterBarButton;
+
 @end
 

@@ -17,4 +17,8 @@
 //    [self.propertyTableView reloadData];
 }
 
+- (IBAction)populateDatabase:(id)sender {
+    
+}
+
 @end

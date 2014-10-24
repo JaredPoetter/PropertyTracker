@@ -65,6 +65,85 @@
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     [request setEntity:entityDesc];
     
+    NSMutableString * filterString = [[NSMutableString alloc] init];
+    NSMutableArray * filterStringArray = [[NSMutableArray alloc] init];
+    
+    NSLog(@"house number %@", self.filterArray[HOUSE_NUMBER_INDEX]);
+    
+    //Checking to see if the strings are empty
+    if (![self.filterArray[HOUSE_NUMBER_INDEX] isEqualToString:@""] && self.filterArray[HOUSE_NUMBER_INDEX] != nil) {
+//        NSLog(@"house number is filled in");
+        [filterStringArray addObject:[NSString stringWithFormat:@"(houseNumber == \"%@\")", self.filterArray[HOUSE_NUMBER_INDEX]]];
+    }
+    if (![self.filterArray[STREET_NAME_INDEX] isEqualToString:@""] && self.filterArray[STREET_NAME_INDEX] != nil) {
+//        NSLog(@"street name is filled in");
+        [filterStringArray addObject:[NSString stringWithFormat:@"(streetName == \"%@\")", self.filterArray[STREET_NAME_INDEX]]];
+    }
+    if (![self.filterArray[CITY_INDEX] isEqualToString:@""] && self.filterArray[CITY_INDEX] != nil) {
+//        NSLog(@"city is filled in");
+        [filterStringArray addObject:[NSString stringWithFormat:@"(city == \"%@\")", self.filterArray[CITY_INDEX]]];
+    }
+    if (![self.filterArray[STATE_INDEX] isEqualToString:@""] && self.filterArray[STATE_INDEX] != nil) {
+//        NSLog(@"state is filled in");
+        [filterStringArray addObject:[NSString stringWithFormat:@"(state == \"%@\")", self.filterArray[STATE_INDEX]]];
+    }
+    if (![self.filterArray[ZIP_CODE_INDEX] isEqualToString:@""] && self.filterArray[ZIP_CODE_INDEX] != nil) {
+//        NSLog(@"zip code is filled in");
+        [filterStringArray addObject:[NSString stringWithFormat:@"(zipCode == \"%@\")", self.filterArray[ZIP_CODE_INDEX]]];
+    }
+    if (![self.filterArray[BATHS_INDEX] isEqualToString:@""] && self.filterArray[BATHS_INDEX] != nil) {
+//        NSLog(@"baths is filled in");
+        [filterStringArray addObject:[NSString stringWithFormat:@"(baths == \"%@\")", self.filterArray[BATHS_INDEX]]];
+    }
+    if (![self.filterArray[BEDROOMS_INDEX] isEqualToString:@""] && self.filterArray[BEDROOMS_INDEX] != nil) {
+//        NSLog(@"bedrooms is filled in");
+        [filterStringArray addObject:[NSString stringWithFormat:@"(bedrooms == \"%@\")", self.filterArray[BEDROOMS_INDEX]]];
+    }
+    if (![self.filterArray[RENT_INDEX] isEqualToString:@""] && self.filterArray[RENT_INDEX] != nil) {
+//        NSLog(@"rent is filled in");
+        [filterStringArray addObject:[NSString stringWithFormat:@"(rent == \"%@\")", self.filterArray[RENT_INDEX]]];
+    }
+    
+    NSLog(@"[filterStringArray count] = %lu", (unsigned long)[filterStringArray count]);
+    
+    NSPredicate *predicate;
+    //There is only one condition
+    if ([filterStringArray count] == 1) {
+        //Creating the predicate
+        predicate = [NSPredicate predicateWithFormat:filterStringArray[0]];
+        [request setPredicate:predicate];
+        
+        NSLog(filterStringArray[0]);
+    }
+    else if ([filterStringArray count] > 1) {
+//        NSMutableArray * filterStringArray;
+        //Append all the conditions except the last one
+        for (int i = 0; i < [filterStringArray count] - 1; i++) {
+            NSLog(@"filterStringArray[i] = %@", filterStringArray[i]);
+            [filterString appendString:filterStringArray[i]];
+            [filterString appendString:@" AND "];
+        }
+        
+        //Append the last one
+        [filterString appendString:filterStringArray[[filterStringArray count] - 1]];
+        
+        //Creating the predicate
+        predicate = [NSPredicate predicateWithFormat:filterString];
+        [request setPredicate:predicate];
+        
+        NSLog(filterString);
+    }
+    
+//    NSMutableArray * filterStringArray;
+//    for (int i = 0; i < [self.filterArray count]; i++) {
+//        //Checking to see if the string is empty
+//        if (![self.filterArray[i] isEqualToString:@""]) {
+//            [filterString appendString:[NSString stringWithFormat:@"("]];
+//        }
+//    }
+    
+    
+    
     NSError *error;
     NSArray *objects = [context executeFetchRequest:request
                                               error:&error];
@@ -163,13 +242,25 @@
     else if([segue.destinationViewController isKindOfClass:[FilterPropertyViewController class]]) {
         FilterPropertyViewController * filterPropertyVC = (FilterPropertyViewController *) segue.destinationViewController;
         filterPropertyVC.delegate = self;
+        filterPropertyVC.filterArray = self.filterArray;
     }
 }
 
 #pragma mark Filter Property
 
--(void) filterPropertyViewControllerDismissed:(NSString *)string {
-    NSLog(string);
+-(void) filterPropertyViewControllerDismissed:(NSMutableArray *)array {
+    //Saving the filter array
+    self.filterArray = array;
+    
+    //Checking to see if the filter is applied
+    if (array == nil) {
+        self.filterBarButton.title = @"Filter";
+        self.filterBarButton.tintColor = nil;
+    }
+    else {
+        self.filterBarButton.title = @"FILTERED";
+        self.filterBarButton.tintColor = [UIColor blueColor];
+    }
 }
 
 @end

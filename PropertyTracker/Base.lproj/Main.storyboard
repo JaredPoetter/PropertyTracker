@@ -197,6 +197,16 @@
                             <constraint firstItem="yz1-TV-jOa" firstAttribute="leading" secondItem="YgF-BX-S4Y" secondAttribute="leadingMargin" id="xfO-hn-Rv4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="filterBaths" destination="hDU-hO-xx7" id="JsP-s5-yFf"/>
+                        <outlet property="filterBedrooms" destination="Cbe-2e-5Qs" id="eUt-uw-ZFh"/>
+                        <outlet property="filterCity" destination="lUK-T1-mnU" id="rhP-FS-fb2"/>
+                        <outlet property="filterHouseNumber" destination="i6g-0u-5k5" id="dwI-Mm-hv8"/>
+                        <outlet property="filterRent" destination="rWh-1J-Eql" id="I94-0M-6cv"/>
+                        <outlet property="filterState" destination="LsV-cX-Pcv" id="mdJ-6y-KZR"/>
+                        <outlet property="filterStreetName" destination="NJw-1D-pOl" id="Gki-nb-I2M"/>
+                        <outlet property="filterZipCode" destination="hhi-vh-CSm" id="pVg-BX-ute"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zMP-VN-4tF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -299,6 +309,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="filterBarButton" destination="Pen-61-tTl" id="sZL-Tc-jaM"/>
                         <outlet property="propertyTableView" destination="xeS-7n-fhx" id="MHC-E0-bie"/>
                     </connections>
                 </viewController>
@@ -1107,6 +1118,15 @@
                                 </state>
                                 <connections>
                                     <action selector="deleteDatabase:" destination="Sg6-Am-K0v" eventType="touchUpInside" id="LM3-mW-vf2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvH-13-1Gm">
+                                <rect key="frame" x="16" y="87" width="131" height="30"/>
+                                <state key="normal" title="Populate Database">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="populateDatabase:" destination="Sg6-Am-K0v" eventType="touchUpInside" id="8Bg-3g-jtZ"/>
                                 </connections>
                             </button>
                         </subviews>
