@@ -34,6 +34,7 @@
 		7FAA187719E7679C006DF56F /* RentEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAA187619E7679C006DF56F /* RentEvent.m */; };
 		7FAA187A19E7679D006DF56F /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAA187919E7679D006DF56F /* Person.m */; };
 		7FAA187E19E85950006DF56F /* AddPropertyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAA187D19E85950006DF56F /* AddPropertyViewController.m */; };
+		7FFCAE1119FB3C65005CD307 /* FilterTenantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCAE1019FB3C65005CD307 /* FilterTenantViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,8 @@
 		7FAA187919E7679D006DF56F /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		7FAA187C19E85950006DF56F /* AddPropertyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPropertyViewController.h; sourceTree = "<group>"; };
 		7FAA187D19E85950006DF56F /* AddPropertyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPropertyViewController.m; sourceTree = "<group>"; };
+		7FFCAE0F19FB3C65005CD307 /* FilterTenantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterTenantViewController.h; sourceTree = "<group>"; };
+		7FFCAE1019FB3C65005CD307 /* FilterTenantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterTenantViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +275,8 @@
 				7FA9ADCB19EC8C27007E609A /* AddTenantViewController.m */,
 				7FA9ADCD19ECAF16007E609A /* TenantDetailViewController.h */,
 				7FA9ADCE19ECAF16007E609A /* TenantDetailViewController.m */,
+				7FFCAE0F19FB3C65005CD307 /* FilterTenantViewController.h */,
+				7FFCAE1019FB3C65005CD307 /* FilterTenantViewController.m */,
 			);
 			name = Tenant;
 			sourceTree = "<group>";
@@ -392,6 +397,7 @@
 				7FAA187719E7679C006DF56F /* RentEvent.m in Sources */,
 				7FAA186E19E7679B006DF56F /* Property.m in Sources */,
 				7FA9ADC919EB2B85007E609A /* PropertyDetailViewController.m in Sources */,
+				7FFCAE1119FB3C65005CD307 /* FilterTenantViewController.m in Sources */,
 				7FAA187119E7679C006DF56F /* Payment.m in Sources */,
 				7FAA187E19E85950006DF56F /* AddPropertyViewController.m in Sources */,
 				7F46401B19E741AA0072A677 /* PropertyTracker.xcdatamodeld in Sources */,

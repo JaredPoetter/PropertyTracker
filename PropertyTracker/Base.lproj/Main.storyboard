@@ -821,6 +821,196 @@
             </objects>
             <point key="canvasLocation" x="2472" y="-4"/>
         </scene>
+        <!--Filter Tenant View Controller-->
+        <scene sceneID="9XV-64-ZIc">
+            <objects>
+                <viewController id="Sjc-ua-lkl" customClass="FilterTenantViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Yow-3S-YAA"/>
+                        <viewControllerLayoutGuide type="bottom" id="gnu-3m-nsb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n02-tv-QA4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filtering Tenants" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0b-mx-MV5">
+                                <rect key="frame" x="16" y="20" width="126" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGq-oJ-BqL">
+                                <rect key="frame" x="16" y="53" width="89" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDU-8Z-CSG">
+                                <rect key="frame" x="16" y="512" width="568" height="30"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Clear Filter">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearFilter:" destination="Sjc-ua-lkl" eventType="touchUpInside" id="j1c-fq-UD0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JVa-YC-Jmw">
+                                <rect key="frame" x="16" y="474" width="568" height="30"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancel:" destination="Sjc-ua-lkl" eventType="touchUpInside" id="Rfa-gh-Nig"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYt-Ih-EVN">
+                                <rect key="frame" x="16" y="91" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cell Phone Number:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kx3-K6-HLI">
+                                <rect key="frame" x="16" y="129" width="155" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House Phone Number:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="boL-rS-w1r">
+                                <rect key="frame" x="16" y="167" width="175" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AhP-oh-Y4p">
+                                <rect key="frame" x="16" y="243" width="47" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employer:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiN-fu-LQT">
+                                <rect key="frame" x="16" y="281" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EfU-Fx-lLe">
+                                <rect key="frame" x="199" y="49" width="385" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WWY-Zi-Jk0">
+                                <rect key="frame" x="199" y="87" width="385" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b9g-gD-8uC">
+                                <rect key="frame" x="199" y="125" width="385" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eXO-hU-wi9">
+                                <rect key="frame" x="199" y="163" width="385" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sap-6a-JnA">
+                                <rect key="frame" x="199" y="239" width="385" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n8s-IL-Mr2">
+                                <rect key="frame" x="199" y="277" width="385" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work Phone Number:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSd-dS-iXY">
+                                <rect key="frame" x="16" y="205" width="165" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AcD-pe-ObA">
+                                <rect key="frame" x="199" y="201" width="385" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nhn-3B-NTj">
+                                <rect key="frame" x="16" y="550" width="568" height="30"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Apply Filter">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="applyFilter:" destination="Sjc-ua-lkl" eventType="touchUpInside" id="lC7-Tp-LWX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VDU-8Z-CSG" firstAttribute="top" secondItem="JVa-YC-Jmw" secondAttribute="bottom" constant="8" id="07e-1M-xhd"/>
+                            <constraint firstItem="AhP-oh-Y4p" firstAttribute="leading" secondItem="n02-tv-QA4" secondAttribute="leadingMargin" id="0hx-wo-Kh2"/>
+                            <constraint firstItem="WWY-Zi-Jk0" firstAttribute="leading" secondItem="LYt-Ih-EVN" secondAttribute="trailing" constant="95" id="1d0-1Y-bQ7"/>
+                            <constraint firstItem="n8s-IL-Mr2" firstAttribute="trailing" secondItem="n02-tv-QA4" secondAttribute="trailingMargin" id="1dL-GH-4Qq"/>
+                            <constraint firstItem="g0b-mx-MV5" firstAttribute="leading" secondItem="n02-tv-QA4" secondAttribute="leadingMargin" id="3DI-mT-Aev"/>
+                            <constraint firstItem="WWY-Zi-Jk0" firstAttribute="top" secondItem="EfU-Fx-lLe" secondAttribute="bottom" constant="8" id="4Oa-Du-tbo"/>
+                            <constraint firstItem="EfU-Fx-lLe" firstAttribute="top" secondItem="Yow-3S-YAA" secondAttribute="bottom" constant="29" id="8d1-Qp-xVl"/>
+                            <constraint firstItem="mSd-dS-iXY" firstAttribute="leading" secondItem="n02-tv-QA4" secondAttribute="leadingMargin" id="8sn-DV-g0y"/>
+                            <constraint firstItem="BiN-fu-LQT" firstAttribute="leading" secondItem="n02-tv-QA4" secondAttribute="leadingMargin" id="9Lt-vd-u7X"/>
+                            <constraint firstItem="Sap-6a-JnA" firstAttribute="trailing" secondItem="n02-tv-QA4" secondAttribute="trailingMargin" id="A7a-3j-dTf"/>
+                            <constraint firstItem="AhP-oh-Y4p" firstAttribute="top" secondItem="mSd-dS-iXY" secondAttribute="bottom" constant="17" id="Ab0-U6-Z6W"/>
+                            <constraint firstItem="Sap-6a-JnA" firstAttribute="top" secondItem="AcD-pe-ObA" secondAttribute="bottom" constant="8" id="B1s-da-Mdu"/>
+                            <constraint firstItem="boL-rS-w1r" firstAttribute="leading" secondItem="n02-tv-QA4" secondAttribute="leadingMargin" id="BwE-PP-faB"/>
+                            <constraint firstItem="Kx3-K6-HLI" firstAttribute="leading" secondItem="n02-tv-QA4" secondAttribute="leadingMargin" id="ERh-hA-rbh"/>
+                            <constraint firstItem="eXO-hU-wi9" firstAttribute="trailing" secondItem="n02-tv-QA4" secondAttribute="trailingMargin" id="EzY-g6-m4D"/>
+                            <constraint firstItem="boL-rS-w1r" firstAttribute="top" secondItem="Kx3-K6-HLI" secondAttribute="bottom" constant="17" id="F25-Lc-hEk"/>
+                            <constraint firstItem="BiN-fu-LQT" firstAttribute="top" secondItem="AhP-oh-Y4p" secondAttribute="bottom" constant="17" id="FFi-9l-RdK"/>
+                            <constraint firstItem="n8s-IL-Mr2" firstAttribute="leading" secondItem="BiN-fu-LQT" secondAttribute="trailing" constant="105" id="H3o-BX-6T9"/>
+                            <constraint firstItem="uGq-oJ-BqL" firstAttribute="leading" secondItem="n02-tv-QA4" secondAttribute="leadingMargin" id="HQ9-EP-j5h"/>
+                            <constraint firstItem="b9g-gD-8uC" firstAttribute="leading" secondItem="Kx3-K6-HLI" secondAttribute="trailing" constant="28" id="HXM-RH-wRT"/>
+                            <constraint firstItem="EfU-Fx-lLe" firstAttribute="trailing" secondItem="n02-tv-QA4" secondAttribute="trailingMargin" id="MRb-Sb-v1K"/>
+                            <constraint firstItem="eXO-hU-wi9" firstAttribute="top" secondItem="b9g-gD-8uC" secondAttribute="bottom" constant="8" id="PgL-nM-GFV"/>
+                            <constraint firstItem="eXO-hU-wi9" firstAttribute="leading" secondItem="boL-rS-w1r" secondAttribute="trailing" constant="8" id="QUY-kG-MYe"/>
+                            <constraint firstItem="VDU-8Z-CSG" firstAttribute="leading" secondItem="n02-tv-QA4" secondAttribute="leadingMargin" id="Qfd-BU-Nz9"/>
+                            <constraint firstItem="JVa-YC-Jmw" firstAttribute="trailing" secondItem="n02-tv-QA4" secondAttribute="trailingMargin" id="SBh-G4-Jvd"/>
+                            <constraint firstItem="mSd-dS-iXY" firstAttribute="top" secondItem="boL-rS-w1r" secondAttribute="bottom" constant="17" id="Ue9-cZ-iLa"/>
+                            <constraint firstItem="EfU-Fx-lLe" firstAttribute="leading" secondItem="uGq-oJ-BqL" secondAttribute="trailing" constant="94" id="VlX-PG-ht2"/>
+                            <constraint firstItem="AcD-pe-ObA" firstAttribute="trailing" secondItem="n02-tv-QA4" secondAttribute="trailingMargin" id="XIU-yH-Cih"/>
+                            <constraint firstItem="g0b-mx-MV5" firstAttribute="top" secondItem="Yow-3S-YAA" secondAttribute="bottom" id="YOX-Js-xcU"/>
+                            <constraint firstItem="Nhn-3B-NTj" firstAttribute="top" secondItem="VDU-8Z-CSG" secondAttribute="bottom" constant="8" id="Ywc-xA-gOE"/>
+                            <constraint firstItem="Kx3-K6-HLI" firstAttribute="top" secondItem="LYt-Ih-EVN" secondAttribute="bottom" constant="17" id="Z4K-jI-4QD"/>
+                            <constraint firstItem="Nhn-3B-NTj" firstAttribute="leading" secondItem="n02-tv-QA4" secondAttribute="leadingMargin" id="aSO-4Y-GqT"/>
+                            <constraint firstItem="AcD-pe-ObA" firstAttribute="top" secondItem="eXO-hU-wi9" secondAttribute="bottom" constant="8" id="e1g-3V-2AO"/>
+                            <constraint firstItem="gnu-3m-nsb" firstAttribute="top" secondItem="Nhn-3B-NTj" secondAttribute="bottom" constant="20" id="fow-U9-9V9"/>
+                            <constraint firstItem="AcD-pe-ObA" firstAttribute="leading" secondItem="mSd-dS-iXY" secondAttribute="trailing" constant="18" id="gap-CF-dag"/>
+                            <constraint firstItem="uGq-oJ-BqL" firstAttribute="top" secondItem="g0b-mx-MV5" secondAttribute="bottom" constant="12" id="h9Y-ft-mTv"/>
+                            <constraint firstItem="b9g-gD-8uC" firstAttribute="trailing" secondItem="n02-tv-QA4" secondAttribute="trailingMargin" id="jAC-Sa-ivW"/>
+                            <constraint firstItem="n8s-IL-Mr2" firstAttribute="top" secondItem="Sap-6a-JnA" secondAttribute="bottom" constant="8" id="lfc-bn-xrt"/>
+                            <constraint firstItem="VDU-8Z-CSG" firstAttribute="trailing" secondItem="n02-tv-QA4" secondAttribute="trailingMargin" id="m9L-IX-w9A"/>
+                            <constraint firstItem="WWY-Zi-Jk0" firstAttribute="trailing" secondItem="n02-tv-QA4" secondAttribute="trailingMargin" id="nII-on-rYX"/>
+                            <constraint firstItem="JVa-YC-Jmw" firstAttribute="leading" secondItem="n02-tv-QA4" secondAttribute="leadingMargin" id="qi2-9H-YFR"/>
+                            <constraint firstItem="LYt-Ih-EVN" firstAttribute="top" secondItem="uGq-oJ-BqL" secondAttribute="bottom" constant="17" id="qxR-sW-Doc"/>
+                            <constraint firstItem="b9g-gD-8uC" firstAttribute="top" secondItem="WWY-Zi-Jk0" secondAttribute="bottom" constant="8" id="sus-dr-iFe"/>
+                            <constraint firstItem="Nhn-3B-NTj" firstAttribute="trailing" secondItem="n02-tv-QA4" secondAttribute="trailingMargin" id="v9T-I7-BhV"/>
+                            <constraint firstItem="LYt-Ih-EVN" firstAttribute="leading" secondItem="n02-tv-QA4" secondAttribute="leadingMargin" id="ySF-Am-vGQ"/>
+                            <constraint firstItem="Sap-6a-JnA" firstAttribute="leading" secondItem="AhP-oh-Y4p" secondAttribute="trailing" constant="136" id="z2x-nd-hmI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="filterCellPhone" destination="b9g-gD-8uC" id="vpe-cM-tbb"/>
+                        <outlet property="filterEmail" destination="Sap-6a-JnA" id="mj9-Xx-t9z"/>
+                        <outlet property="filterEmployer" destination="n8s-IL-Mr2" id="9Fu-q4-ByK"/>
+                        <outlet property="filterFirstName" destination="EfU-Fx-lLe" id="Bll-sL-BD1"/>
+                        <outlet property="filterHousePhone" destination="eXO-hU-wi9" id="eRX-ac-cST"/>
+                        <outlet property="filterLastName" destination="WWY-Zi-Jk0" id="M9q-MC-iiv"/>
+                        <outlet property="filterWorkPhone" destination="AcD-pe-ObA" id="YDr-nj-XFx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OQX-Wx-RAH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1618" y="720"/>
+        </scene>
         <!--Tenant Detail View Controller-->
         <scene sceneID="HrZ-BO-utU">
             <objects>
@@ -953,7 +1143,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="smx-nh-Fch" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2472" y="740"/>
+            <point key="canvasLocation" x="2472" y="720"/>
         </scene>
         <!--Tenant View Controller-->
         <scene sceneID="wg7-f3-ORb">
@@ -1078,7 +1268,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qHN-6D-k4t">
-                        <barButtonItem key="leftBarButtonItem" title="Filter" id="S5Y-ch-MZA"/>
+                        <barButtonItem key="leftBarButtonItem" title="Filter" id="S5Y-ch-MZA">
+                            <connections>
+                                <segue destination="Sjc-ua-lkl" kind="presentation" id="Ter-Ht-MQj"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Pc4-5w-B0S">
                             <connections>
                                 <segue destination="JvK-9t-GMn" kind="presentation" id="Yji-y4-UHI"/>
@@ -1086,6 +1280,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="filterBarButton" destination="S5Y-ch-MZA" id="ooz-ys-10i"/>
                         <outlet property="tenantTableView" destination="Hfl-Oy-91N" id="WC6-7D-aE9"/>
                     </connections>
                 </viewController>

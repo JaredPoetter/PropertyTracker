@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "TenantDetailViewController.h"
 #import "Person.h"
+#import "FilterTenantViewController.h"
 
 #define TENANT_TABLE_VIEW_CELL_ID @"TenantCell_ID"
 
@@ -52,6 +53,62 @@
     NSEntityDescription *entityDesc = [NSEntityDescription entityForName:@"Person" inManagedObjectContext:context];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     [request setEntity:entityDesc];
+    
+    NSMutableString * filterString = [[NSMutableString alloc] init];
+    NSMutableArray * filterStringArray = [[NSMutableArray alloc] init];
+    
+    //Checking to see if the strings are empty
+    if (![self.filterArray[FIRST_NAME_INDEX] isEqualToString:@""] && self.filterArray[FIRST_NAME_INDEX] != nil) {
+        [filterStringArray addObject:[NSString stringWithFormat:@"(firstName == \"%@\")", self.filterArray[FIRST_NAME_INDEX]]];
+    }
+    if (![self.filterArray[LAST_NAME_INDEX] isEqualToString:@""] && self.filterArray[LAST_NAME_INDEX] != nil) {
+        [filterStringArray addObject:[NSString stringWithFormat:@"(lastName == \"%@\")", self.filterArray[LAST_NAME_INDEX]]];
+    }
+    if (![self.filterArray[CELL_PHONE_INDEX] isEqualToString:@""] && self.filterArray[CELL_PHONE_INDEX] != nil) {
+        [filterStringArray addObject:[NSString stringWithFormat:@"(cellPhoneNumber == \"%@\")", self.filterArray[CELL_PHONE_INDEX]]];
+    }
+    if (![self.filterArray[HOUSE_PHONE_INDEX] isEqualToString:@""] && self.filterArray[HOUSE_PHONE_INDEX] != nil) {
+        [filterStringArray addObject:[NSString stringWithFormat:@"(housePhoneNumber == \"%@\")", self.filterArray[HOUSE_PHONE_INDEX]]];
+    }
+    if (![self.filterArray[WORK_PHONE_INDEX] isEqualToString:@""] && self.filterArray[WORK_PHONE_INDEX] != nil) {
+        [filterStringArray addObject:[NSString stringWithFormat:@"(workPhoneNumber == \"%@\")", self.filterArray[WORK_PHONE_INDEX]]];
+    }
+    if (![self.filterArray[EMAIL_INDEX] isEqualToString:@""] && self.filterArray[EMAIL_INDEX] != nil) {
+        [filterStringArray addObject:[NSString stringWithFormat:@"(email == \"%@\")", self.filterArray[EMAIL_INDEX]]];
+    }
+    if (![self.filterArray[EMPLOYER_INDEX] isEqualToString:@""] && self.filterArray[EMPLOYER_INDEX] != nil) {
+        [filterStringArray addObject:[NSString stringWithFormat:@"(employer == \"%@\")", self.filterArray[EMPLOYER_INDEX]]];
+    }
+    
+    NSLog(@"[filterStringArray count] = %lu", (unsigned long)[filterStringArray count]);
+    
+    NSPredicate *predicate;
+    //There is only one condition
+    if ([filterStringArray count] == 1) {
+        //Creating the predicate
+        predicate = [NSPredicate predicateWithFormat:filterStringArray[0]];
+        [request setPredicate:predicate];
+        
+        NSLog(filterStringArray[0]);
+    }
+    else if ([filterStringArray count] > 1) {
+        //        NSMutableArray * filterStringArray;
+        //Append all the conditions except the last one
+        for (int i = 0; i < [filterStringArray count] - 1; i++) {
+            NSLog(@"filterStringArray[i] = %@", filterStringArray[i]);
+            [filterString appendString:filterStringArray[i]];
+            [filterString appendString:@" AND "];
+        }
+        
+        //Append the last one
+        [filterString appendString:filterStringArray[[filterStringArray count] - 1]];
+        
+        //Creating the predicate
+        predicate = [NSPredicate predicateWithFormat:filterString];
+        [request setPredicate:predicate];
+        
+        NSLog(filterString);
+    }
     
     NSError *error;
     NSArray *objects = [context executeFetchRequest:request
@@ -149,6 +206,28 @@
     if ([segue.destinationViewController isKindOfClass:[TenantDetailViewController class]]) {
         TenantDetailViewController * tenantDetailVC = (TenantDetailViewController *) segue.destinationViewController;
         tenantDetailVC.person = self.tenants[indexPath.row];
+    }
+    else if([segue.destinationViewController isKindOfClass:[FilterTenantViewController class]]) {
+        FilterTenantViewController * filterTenantVC = (FilterTenantViewController *) segue.destinationViewController;
+        filterTenantVC.delegate = self;
+        filterTenantVC.filterArray = self.filterArray;
+    }
+}
+
+#pragma mark Filter Property
+
+-(void) filterTenantViewControllerDismissed:(NSMutableArray *)array {
+    //Saving the filter array
+    self.filterArray = array;
+    
+    //Checking to see if the filter is applied
+    if (array == nil) {
+        self.filterBarButton.title = @"Filter";
+        self.filterBarButton.tintColor = nil;
+    }
+    else {
+        self.filterBarButton.title = @"FILTERED";
+        self.filterBarButton.tintColor = [UIColor blueColor];
     }
 }
 

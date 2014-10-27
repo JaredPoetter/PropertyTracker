@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "FilterTenantViewController.h"
 
-@interface TenantViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface TenantViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, FilterTenantViewControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView * tenantTableView;
 @property (strong, nonatomic) NSArray * tenants;
+
+@property (strong, nonatomic) NSMutableArray * filterArray;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *filterBarButton;
 
 @end
 
